@@ -1,0 +1,41 @@
+-keep class com.mycalendar.selectcalendars.SelectCalendarsSyncFragment
+-keep class com.mycalendar.OtherPreferences
+-keep class com.mycalendar.AboutPreferences
+-keep class com.mycalendar.GeneralPreferences
+-keepclassmembers class com.mycalendar.AllInOneActivity {
+  *** setControlsOffset(...);
+}
+-keepclassmembers class com.mycalendar.selectcalendars.SelectVisibleCalendarsActivity {
+  *** handleSelectSyncedCalendarsClicked(...);
+}
+-keepclassmembers class com.mycalendar.AllInOneActivity {
+  *** handleSelectSyncedCalendarsClicked(...);
+}
+-keepclassmembers class com.mycalendar.AsyncQueryService {
+  *** setTestHandler(...);
+  *** getLastCancelableOperation(...);
+}
+-keepclassmembers class com.mycalendar.AsyncQueryServiceHelper$OperationInfo {
+  *** equivalent(...);
+}
+-keepclassmembers class com.mycalendar.DayView {
+  *** setAnimateDayHeight(...);
+  *** setAnimateDayEventHeight(...);
+  *** setMoreAllDayEventsTextAlpha(...);
+  *** setExpandDayHeightIconRotation(...);
+  *** setViewStartY(...);
+  *** setAnimateTodayAlpha(...);
+  *** setEventsAlpha(...);
+  *** getEventsAlpha(...);
+}
+-keepclassmembers class com.mycalendar.month.MonthWeekEventsView {
+  *** setAnimateTodayAlpha(...);
+}
+-keepclassmembers class com.mycalendar.event.EditEventHelper {
+ *** updateRecurrenceRule(...);
+ *** extractDomain(...);
+}
+
+-keepclassmembers class * implements android.content.SharedPreferences$Editor {
+  public *** apply();
+}
